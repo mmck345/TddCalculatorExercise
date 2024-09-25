@@ -1,4 +1,5 @@
 ﻿namespace Calculator;
+using CliUserCalculator;
 
 public class Calculator
 {
@@ -16,6 +17,17 @@ public class Program
 {
     static void Main(string[] args)
     {
+
         Console.WriteLine("Welcome to simple calculator!");
+
+        bool continueLoop = true;
+
+        while (continueLoop)
+        {
+            continueLoop = CliUserCalculator.StartCalcultorInput();
+        };
+
+        if (!continueLoop) Console.WriteLine("User ended loop with exit code.");
+
     }
 }
