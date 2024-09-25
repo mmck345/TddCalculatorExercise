@@ -2,9 +2,9 @@
 
 public class Calculator
 {
-    public static int Add(int number1, int number2) => number1 + number2;
-    public static int Subtract(int number1, int number2) => number1 - number2;
-    public static int Multiply(int number1, int number2) => number1 * number2;
+    public static double Add(double number1, double number2) => number1 + number2;
+    public static double Subtract(double number1, double number2) => number1 - number2;
+    public static double Multiply(double number1, double number2) => number1 * number2;
     public static double Divide(double number1, double number2)
     {
         if(number2 == 0) throw new DivideByZeroException();

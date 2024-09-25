@@ -17,7 +17,7 @@ public class CalculatorTests
     [TestMethod]
     [DataRow(-5, -10, -15)]
     [DataRow(-0, -1, -1)]
-    public void GivenTwoNegativeNumbers_WhenAdded_ThenReturnsCorrectSum(int a, int b, int expected)
+    public void GivenTwoNegativeNumbers_WhenAdded_ThenReturnsCorrectSum(double a, double b, double expected)
     {
         Assert.AreEqual(Calculator.Add(a, b), expected);
     }
@@ -27,7 +27,7 @@ public class CalculatorTests
     [TestMethod]
     [DataRow(5, 10, -5)]
     [DataRow(1000, 1, 999)]
-    public void GivenTwoPositiveNumbers_WhenSubtract_ThenReturnsCorrectValue(int a, int b, int expected)
+    public void GivenTwoPositiveNumbers_WhenSubtract_ThenReturnsCorrectValue(double a, double b, double expected)
     {
         var result = Calculator.Subtract(a, b);
         Assert.AreEqual(result, expected);
@@ -39,7 +39,7 @@ public class CalculatorTests
     [TestMethod]
     [DataRow(5, 10, 50)]
     [DataRow(0, 10, 0)]
-    public void GivenTwoPositiveNumbers_WhenMultiply_ThenReturnsCorrectValue(int a, int b, int expected)
+    public void GivenTwoPositiveNumbers_WhenMultiply_ThenReturnsCorrectValue(double a, double b, double expected)
     {
         var result = Calculator.Multiply(a, b);
         Assert.AreEqual(result, expected);
@@ -48,7 +48,7 @@ public class CalculatorTests
     [TestMethod]
     [DataRow(-120, -3, 360)]
     [DataRow(-120, 3, -360)]
-    public void GivenTwoNegativeNumbers_WhenMultiply_ThenReturnsCorrectValue(int a, int b, int expected)
+    public void GivenTwoNegativeNumbers_WhenMultiply_ThenReturnsCorrectValue(double a, double b, double expected)
     {
         var result = Calculator.Multiply(a, b);
         Assert.AreEqual(result, expected);
