@@ -4,7 +4,14 @@ namespace Calculator.Tests;
 public class CalculatorTests
 {
     [TestMethod]
-    public void TestMethod1()
+    public void GivenTwoPositiveNumbers_WhenAdded_ThenReturnsCorrectSum()
     {
+        var calculator = new Calculator();
+
+        var resultExpected = 5 + 10; // 15
+
+        var result = calculator.Add(5, 10);
+
+        Assert.AreEqual(result, resultExpected);
     }
 }
