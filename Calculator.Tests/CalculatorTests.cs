@@ -54,5 +54,33 @@ public class CalculatorTests
         Assert.AreEqual(result, expected);
     }
 
+    // Divide 
+
+    [TestMethod]
+    [DataRow(10, 10, 1)]
+    [DataRow(25, 10, 2.5)]
+    [DataRow(10, 25, 0.4)]
+    public void GivenTwoPositiveNumbers_WhenDivide_ThenReturnsCorrectValue(int a, int b, int expected)
+    {
+        var result = Calculator.Divide(a, b);
+        Assert.AreEqual(result, expected);
+    }
+
+
+    [TestMethod]
+    [DataRow(-120, -3, 40)]
+    [DataRow(-120, 3, -40)]
+    public void GivenTwoNegativeNumbers_WhenDivide_ThenReturnsCorrectValue(int a, int b, int expected)
+    {
+        var result = Calculator.Divide(a, b);
+        Assert.AreEqual(result, expected);
+    }
+
+    [TestMethod]
+    [ExpectedException(typeof(DivideByZeroException))]
+    public void GivenDivideByZero_WhenDivide_ThenThrowDivideByZeroException()
+    {
+        Calculator.Divide(10, 0);
+    }
 
 }
