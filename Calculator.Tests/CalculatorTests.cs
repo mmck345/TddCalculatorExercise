@@ -35,13 +35,13 @@ public class CalculatorTests
 
     
     // Multiply
-    
+
     [TestMethod]
     [DataRow(5, 10, 50)]
     [DataRow(0, 10, 0)]
     public void GivenTwoPositiveNumbers_WhenMultiply_ThenReturnsCorrectValue(int a, int b, int expected)
     {
-        var result = Calculator.Subtract(a, b);
+        var result = Calculator.Multiply(a, b);
         Assert.AreEqual(result, expected);
     }
 
@@ -50,7 +50,7 @@ public class CalculatorTests
     [DataRow(-120, 3, -360)]
     public void GivenTwoNegativeNumbers_WhenMultiply_ThenReturnsCorrectValue(int a, int b, int expected)
     {
-        var result = Calculator.Subtract(a, b);
+        var result = Calculator.Multiply(a, b);
         Assert.AreEqual(result, expected);
     }
 
