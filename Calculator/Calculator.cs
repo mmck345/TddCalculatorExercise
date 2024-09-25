@@ -2,9 +2,9 @@
 
 public class Calculator
 {
-    public int Add(int a, int b)
+    public int Add(int number1, int number2)
     {
-        return a + b;
+        return number1 + number2;
     }
 }
 
