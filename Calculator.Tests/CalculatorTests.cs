@@ -4,6 +4,7 @@ namespace Calculator.Tests;
 public class CalculatorTests
 {
 
+    // Add
     [TestMethod]
     public void GivenTwoPositiveNumbers_WhenAdded_ThenReturnsCorrectSum()
     {
@@ -21,5 +22,15 @@ public class CalculatorTests
         Assert.AreEqual(Calculator.Add(a, b), expected);
     }
 
+    // Subtract
+
+    [TestMethod]
+    [DataRow(5, 10, -5)]
+    [DataRow(1000, 1, 999)]
+    public void GivenTwoPositiveNumbers_WhenSubtract_ThenReturnsCorrectValue(int a, int b, int expected)
+    {
+        var result = Calculator.Subtract(a, b);
+        Assert.AreEqual(result, expected);
+    }
 
 }
